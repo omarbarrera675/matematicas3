@@ -1,0 +1,361 @@
+/* ===== Fondo de la pantalla ===== */
+body{
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: #14213d;
+    margin: 0;
+    background-color: #eef2fa;
+    background-image: linear-gradient(#d9e2f2 1px, transparent 1px), linear-gradient(90deg, #d9e2f2 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+/* Enlace para saltar el menú (accesibilidad) */
+.saltar{
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #ffe58a;
+    color: #14213d;
+    padding: 10px 16px;
+    z-index: 10;
+}
+.saltar:focus{
+    left: 0;
+}
+
+/* ===== Menú azul (header > nav) ===== */
+header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #14213d;
+    padding: 20px 0;
+    overflow: auto;
+    box-sizing: border-box;
+}
+nav .marca{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18.7px;
+    font-weight: bold;
+    margin: 0 20px 20px 20px;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    margin: 0;
+}
+nav a{
+    display: block;
+    color: #c5cfeb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 9px 20px;
+    border-left: 4px solid transparent;
+}
+nav a:hover{
+    color: #14213d;
+    background-color: #ffe58a;
+}
+nav a[aria-current="page"]{
+    color: white;
+    border-left-color: #ffe58a;
+    background-color: #22335c;
+}
+nav a[aria-current="page"]:hover{
+    color: #14213d;
+    background-color: #ffe58a;
+}
+
+/* ===== Contenido principal (main) ===== */
+.contenido{
+    background-color: white;
+    max-width: 780px;
+    margin: 30px auto 20px 260px;
+    padding: 20px 40px 40px 40px;
+    border: 1px solid #c9d3e8;
+    border-radius: 6px;
+}
+section{
+    margin-bottom: 10px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #14213d;
+    border-bottom: 4px solid #2b4bd8;
+    padding-bottom: 8px;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2b4bd8;
+    margin-top: 35px;
+}
+h3, h4{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    color: #2b4bd8;
+    font-size: 18px;
+}
+a:focus-visible, input:focus-visible, select:focus-visible, button:focus-visible{
+    outline: 3px solid #f2c200;
+    outline-offset: 2px;
+}
+dt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #14213d;
+    margin-top: 14px;
+    border-left: 4px solid #2b4bd8;
+    padding-left: 10px;
+}
+dd{
+    margin-left: 20px;
+}
+li{
+    margin-bottom: 4px;
+}
+abbr[title]{
+    text-decoration: underline dotted;
+    cursor: help;
+}
+code{
+    background-color: #eef2ff;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+.nota{
+    font-size: 16px;
+    color: #4a5a7a;
+}
+
+/* ===== Tablas ===== */
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+caption{
+    caption-side: top;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #14213d;
+    padding-bottom: 8px;
+}
+th{
+    background-color: #14213d;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+tbody th[scope="row"]{
+    background-color: #e3e9f7;
+    color: #14213d;
+    border: 1px solid #c9d3e8;
+}
+td{
+    padding: 10px;
+    border: 1px solid #c9d3e8;
+    color: #14213d;
+    background-color: white;
+}
+
+/* ===== Imágenes, figuras, video y audio ===== */
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+video{
+    max-width: 100%;
+    height: auto;
+}
+figure{
+    margin: 20px 0;
+}
+figcaption{
+    font-size: 15px;
+    color: #4a5a7a;
+    margin-top: 6px;
+}
+
+/* ===== Cita de Galileo (figure > blockquote) ===== */
+.cita{
+    background-color: #fff6cc;
+    border-left: 6px solid #f2c200;
+    margin: 12px 0 25px 0;
+    padding: 12px 20px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 4px 20px;
+    align-items: center;
+}
+.cita img{
+    grid-row: 1 / span 2;
+}
+.cita blockquote{
+    margin: 0;
+    font-style: italic;
+    font-size: 20px;
+}
+.cita blockquote p{
+    margin: 0;
+}
+.cita figcaption{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    color: #14213d;
+    margin-top: 0;
+}
+
+/* ===== Conceptos de la página de rectas (article) ===== */
+.concepto{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 0 24px;
+    align-items: start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e3e9f7;
+}
+.concepto h2{
+    grid-column: 1;
+    margin: 20px 0 8px 0;
+}
+.concepto p{
+    grid-column: 1;
+    margin: 0;
+}
+.concepto img{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin-top: 20px;
+}
+
+/* ===== Formularios y botones ===== */
+fieldset{
+    border: 2px solid #c9d3e8;
+    border-radius: 6px;
+    padding: 12px 20px 20px 20px;
+    margin: 15px 0;
+}
+legend{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 0 8px;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.preguntas{
+    padding-left: 22px;
+}
+.preguntas li{
+    margin-bottom: 20px;
+}
+.preguntas label{
+    display: block;
+    margin-bottom: 6px;
+}
+input, select{
+    font-size: 17px;
+    padding: 8px;
+    border: 2px solid #c9d3e8;
+    border-radius: 4px;
+}
+button, input[type="submit"]{
+    font-size: 17px;
+    padding: 10px 22px;
+    background-color: #2b4bd8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover, input[type="submit"]:hover{
+    background-color: #1f38a8;
+}
+
+/* ===== Resultados ===== */
+#resultado, #nota{
+    display: block;
+    background-color: #eef2ff;
+    border-left: 6px solid #2b4bd8;
+    padding: 15px;
+    font-size: 20px;
+}
+.bien{
+    color: #1f7a4d;
+}
+.mal{
+    color: #b3341f;
+}
+.enlaces{
+    margin-top: 25px;
+}
+
+/* ===== Pie de página (footer) ===== */
+footer{
+    max-width: 780px;
+    margin: 0 auto 30px 260px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #4a5a7a;
+}
+footer a{
+    font-size: 15px;
+}
+
+/* ===== Pantallas chicas ===== */
+@media (max-width: 800px){
+    header nav{
+        position: static;
+        width: auto;
+        height: auto;
+        text-align: center;
+        padding: 10px 0;
+    }
+    nav li{
+        display: inline-block;
+    }
+    nav a{
+        display: inline-block;
+        border-left: none;
+    }
+    nav .marca{
+        display: none;
+    }
+    .contenido{
+        margin: 20px 10px;
+        padding: 10px 20px 30px 20px;
+    }
+    footer{
+        margin: 0 10px 30px 10px;
+        padding: 0 20px;
+    }
+    .concepto{
+        grid-template-columns: 1fr;
+    }
+    .concepto img{
+        grid-column: 1;
+        grid-row: auto;
+    }
+    .cita{
+        grid-template-columns: 1fr;
+    }
+    .cita img{
+        grid-row: auto;
+    }
+}

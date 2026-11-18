@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicaciones del pensamiento matemático: ángulos, rectas, coordenadas, congruencia y más.">
+    <title>Inicio | Pensamiento matemático</title>
+    <link rel="icon" href="Imagenes/images.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header>
+        <nav aria-label="Menú principal">
+            <p class="marca">Pensamiento matemático</p>
+            <ul>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="angulos.html">Ángulos</a></li>
+                <li><a href="transversal.html">Transversales</a></li>
+                <li><a href="consem.html">Congruencia y Semejanza</a></li>
+                <li><a href="coordenadas.html">Coordenadas</a></li>
+                <li><a href="recta.html">Rectas</a></li>
+                <li><a href="laboratorio.html">Laboratorio</a></li>
+                <li><a href="formulario.html">Examen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" class="contenido">
+        <h1>Aplicaciones del Pensamiento Matemático</h1>
+
+        <figure>
+            <audio controls loop preload="none" aria-label="Audio de introducción">
+                <source src="audio.mp3" type="audio/mpeg">
+                <p>Tu navegador no puede reproducir audio.</p>
+            </audio>
+            <figcaption>Audio de introducción</figcaption>
+        </figure>
+
+        <section aria-labelledby="que-es">
+            <h2 id="que-es">¿Qué es el pensamiento matemático?</h2>
+            <p>La aplicación del pensamiento matemático es la capacidad de usar el razonamiento lógico, el análisis y los conceptos numéricos o espaciales para resolver problemas reales y comprender situaciones cotidianas o científicas.</p>
+            <p>Las matemáticas no son solo una materia más de la escuela que piensas que no usarás en la vida cotidiana, sino que pueden servirnos para muchas cosas:</p>
+            <ul>
+                <li>Tomar decisiones cotidianas (compras, tiempos, presupuestos).</li>
+                <li>Resolver problemas en ciencias, tecnología y economía.</li>
+                <li>Desarrollar pensamiento crítico y creativo.</li>
+            </ul>
+        </section>
+
+        <aside aria-label="Cita de Galileo Galilei">
+            <p>Como diría el gran científico italiano:</p>
+            <figure class="cita">
+                <img src="Galileo.webp" alt="Retrato de Galileo Galilei" width="120" height="120" loading="lazy">
+                <blockquote>
+                    <p>La naturaleza está escrita en lenguaje matemático.</p>
+                </blockquote>
+                <figcaption>— Galileo Galilei</figcaption>
+            </figure>
+        </aside>
+
+        <section aria-labelledby="ramas">
+            <h2 id="ramas">Las matemáticas se dividen en varias ramas</h2>
+            <ul>
+                <li><a href="angulos.html">Ángulos</a></li>
+                <li><a href="transversal.html">Rectas Transversales</a></li>
+                <li><a href="consem.html">Congruencia y Semejanza</a></li>
+                <li><a href="coordenadas.html">Coordenadas</a></li>
+                <li><a href="recta.html">Rectas</a></li>
+                <li><a href="laboratorio.html">Laboratorio (calculadoras con JavaScript)</a></li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="formulario">
+            <h2 id="formulario">Contesta este formulario</h2>
+            <p><a href="formulario.html">Ir al examen</a></p>
+
+            <form action="gracias.html" method="get">
+                <fieldset>
+                    <legend>¿Qué calificación me quiere poner?</legend>
+                    <label for="Calificacion">Calificación:</label>
+                    <select id="Calificacion" name="Calificacion" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <input type="submit" value="Registrar">
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Aplicaciones del Pensamiento Matemático · <a href="#contenido">Volver arriba</a></p>
+    </footer>
+</body>
+</html>

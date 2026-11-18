@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cuestionario de cinco preguntas sobre ángulos, semejanza y rectas.">
+    <title>Examen | Pensamiento matemático</title>
+    <link rel="icon" href="Imagenes/images.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header>
+        <nav aria-label="Menú principal">
+            <p class="marca">Pensamiento matemático</p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="angulos.html">Ángulos</a></li>
+                <li><a href="transversal.html">Transversales</a></li>
+                <li><a href="consem.html">Congruencia y Semejanza</a></li>
+                <li><a href="coordenadas.html">Coordenadas</a></li>
+                <li><a href="recta.html">Rectas</a></li>
+                <li><a href="laboratorio.html">Laboratorio</a></li>
+                <li><a href="formulario.html" aria-current="page">Examen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" class="contenido">
+        <h1>Cuestionario de mi página</h1>
+
+        <form action="resultado.html" method="get">
+            <fieldset>
+                <legend>Responde las 5 preguntas</legend>
+                <ol class="preguntas">
+                    <li>
+                        <label for="q1">¿Cuántos grados tiene un círculo completo?</label>
+                        <input type="number" id="q1" name="q1" min="0" max="360" required>
+                    </li>
+                    <li>
+                        <label for="q2">¿Cómo se llama el ángulo de 90 grados?</label>
+                        <input type="text" id="q2" name="q2" required>
+                    </li>
+                    <li>
+                        <label for="q3">¿Qué tipo de ángulos se forman cuando una transversal corta dos rectas paralelas y están en lados opuestos dentro de las rectas?</label>
+                        <input type="text" id="q3" name="q3" required>
+                    </li>
+                    <li>
+                        <label for="q4">¿Qué criterio de semejanza se cumple si dos ángulos son iguales?</label>
+                        <input type="text" id="q4" name="q4" required>
+                    </li>
+                    <li>
+                        <label for="q5">En la ecuación de la recta y = mx + b, ¿qué representa la letra m?</label>
+                        <input type="text" id="q5" name="q5" required>
+                    </li>
+                </ol>
+            </fieldset>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Aplicaciones del Pensamiento Matemático · <a href="#contenido">Volver arriba</a></p>
+    </footer>
+</body>
+</html>

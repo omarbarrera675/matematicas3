@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resultado del cuestionario.">
+    <title>Resultado | Pensamiento matemático</title>
+    <link rel="icon" href="Imagenes/images.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header>
+        <nav aria-label="Menú principal">
+            <p class="marca">Pensamiento matemático</p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="angulos.html">Ángulos</a></li>
+                <li><a href="transversal.html">Transversales</a></li>
+                <li><a href="consem.html">Congruencia y Semejanza</a></li>
+                <li><a href="coordenadas.html">Coordenadas</a></li>
+                <li><a href="recta.html">Rectas</a></li>
+                <li><a href="laboratorio.html">Laboratorio</a></li>
+                <li><a href="formulario.html" aria-current="page">Examen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" class="contenido">
+        <h1>Tu resultado</h1>
+
+        <section aria-labelledby="calificacion">
+            <h2 id="calificacion">Calificación</h2>
+            <p id="nota" role="status">Todavía no contestas el examen.</p>
+        </section>
+
+        <section aria-labelledby="detalle-titulo">
+            <h2 id="detalle-titulo">Detalle por pregunta</h2>
+            <ul id="detalle"></ul>
+        </section>
+
+        <img src="gatof.webp" alt="Gato" width="150" height="150" loading="lazy">
+
+        <p class="enlaces"><a href="formulario.html">Intentar de nuevo</a> | <a href="index.html">Regresar al inicio</a></p>
+    </main>
+
+    <footer>
+        <p>Aplicaciones del Pensamiento Matemático · <a href="#contenido">Volver arriba</a></p>
+    </footer>
+    <script>
+        // Aqui se leen las respuestas que se mandaron en el formulario (?q1=...&q2=...)
+        let datos=new URLSearchParams(window.location.search);
+
+        let puntos=0;
+        let texto="";
+
+        // Esta funcion revisa una pregunta y suma 2 puntos si esta bien
+        function revisar(numero, estaBien, correcta){
+            if(estaBien){
+                puntos=puntos+2;
+                texto=texto+"<li class='bien'>Pregunta "+numero+": correcta</li>";
+            }else{
+                texto=texto+"<li class='mal'>Pregunta "+numero+": incorrecta. La respuesta era: "+correcta+"</li>";
+            }
+        }
+
+        if(datos.get("q1")!=null){
+            let r1=Number(datos.get("q1"));
+            let r2=datos.get("q2").toLowerCase();
+            let r3=datos.get("q3").toLowerCase();
+            let r4=datos.get("q4").toLowerCase();
+            let r5=datos.get("q5").toLowerCase();
+
+            revisar(1, r1==360, "360");
+            revisar(2, r2.includes("recto"), "Recto");
+            revisar(3, r3.includes("alterno") && r3.includes("intern"), "Alternos internos");
+            revisar(4, r4.trim()=="aa" || r4.includes("angulo") || r4.includes("ángulo"), "AA (angulo-angulo)");
+            revisar(5, r5.includes("pendiente"), "La pendiente");
+
+            let mensaje="Tu calificación es: "+puntos+" de 10. ";
+            if(puntos>=6){
+                mensaje=mensaje+"Aprobaste, felicidades.";
+            }else{
+                mensaje=mensaje+"Reprobaste, repasa y vuelve a intentarlo.";
+            }
+            document.getElementById("nota").innerHTML=mensaje;
+            document.getElementById("detalle").innerHTML=texto;
+        }
+    </script>
+</body>
+</html>
